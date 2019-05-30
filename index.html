@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="backend.js"></script>
+</head>
+
+<body>
+  <!-- Separamos las tres cajas del texto de debajo (para hacer la página responsive) -->
+  <fieldset style="border: 0px">
+    <!-- CAJA 1 -->
+    <div id="caja">
+      <!-- Título -->
+      Gratis hasta 5 usuarios
+
+      <!-- Contenido -->
+      <div id="li_content">
+        <li>Usuarios Ilimitados.</li>
+        <li>Hasta 5 usuarios activos.</li>
+        <li>Descarga de informes de todos los usuarios.</li>
+        <li>Almacenamiento informes mensuales durante 4 años. Los informes más antiguos se borrarán mensualmente de
+          forma
+          automática.</li>
+
+        <p>Precio: <b>GRATIS</b></p>
+      </div>
+
+      <!-- Botón -->
+      <input type="button" value="Alta gratis" class="boton">
+    </div>
+
+    <!-- CAJA 2 -->
+    <div id="caja">
+      <!-- Desplegable 1 -->
+      <div id="selector_pago_parcial">
+        Pago
+        <select id= "selTiposTarifa" class="desplegable" onchange="calcularPagoTarifa()">
+          <option>Mensual</option>
+          <option>Anual</option>
+          <option>Bianual</option>
+        </select>
+      </div>
+
+      <!-- Desplegable 2 -->
+      <div id="selector_pago_parcial">
+        Usuarios
+        <select id= "selUsuariosTarifa" class="desplegable" onchange="calcularPagoTarifa()">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+          <option>60</option>
+          <option>70</option>
+          <option>80</option>
+          <option>90</option>
+          <option>100</option>
+        </select>
+      </div>
+
+      <!-- Contenido-->
+      <div id="li_content">
+        <li>Usuarios Ilimitados.</li>
+        <li>Hasta <b id="usuariosPagoTarifa"  style="color:red;">10</b> usuarios activos.</li>
+        <li>Descarga de informes de todos los usuarios.</li>
+        <li>Almacenamiento informes <b>ilimitado</b></li>
+
+        <p>Precio: <b id="valorPagoTarifa" style="color:red;">10€ cada mes</b></p>
+      </div>
+
+      <!-- Botón -->
+      <input type="button" value="Contratar" class="boton">
+    </div>
+
+    <!-- CAJA 3-->
+    <div id="caja">
+      <!-- Título -->
+      <div>Pago único</div>
+      <div id="selector_pago_unico">
+        Usuarios
+        <select id= "selPagoUnico"  class="desplegable" onchange="calcularPagoUnico()">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+          <option>40</option>
+          <option>50</option>
+          <option>60</option>
+          <option>70</option>
+          <option>80</option>
+          <option>90</option>
+          <option>100</option>
+        </select>
+      </div>
+
+      <!-- Contenido -->
+      <div id="li_content">
+        <li>Usuarios Ilimitados.</li>
+        <li>Hasta <b id="usuariosPagoUnico" style="color:red;">10</b> usuarios activos.</li>
+        <li>Descarga de informes de todos los usuarios.</li>
+        <li>Almacenamiento informes <b>ilimitado</b></li>
+
+        <p>Precio: <b id="valorPagoUnico" style="color:red;">400€</b> <b>pago único</b></p>
+      </div>
+
+      <!-- Botón -->
+      <input type="button" value="Contratar" class="boton">
+    </div>
+  </fieldset>
+
+  <!-- Contenido -->
+  <div id="li_body_content">
+    <li>Pago por domiciliación bancaria; tras firma de contrato SEPA B2B. Pagos al inicio del periodo contratado.</li>
+    <li>Al no renovar se activa el plan gratis, con hasta 5 usuarios activos y el resto en modo consulta.</li>
+    <li>En todo momento podrá decidir qué usuarios son activos y cuáles no para ajustarse a su plan.</li>
+  </div>
+
+</body>
+
+</html>
